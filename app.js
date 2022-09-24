@@ -14,15 +14,25 @@ const user = {
         console.log('HELLO tHERE!');
     }
 };
-
+const funnytext = 'Bananan';
 const listOfUsers = ['Alain', 'Herve', 'Name3', 'Name4'];
 window.console.clear();
 window.console.error('This is an error Message!') // I hate errors.
 // console.warn('Be warned!');
-user.greet();
-console.log(listOfUsers[3]);
-listOfUsers.push('Name5', 'NAME6');
-console.log(listOfUsers);
-listOfUsers.shift();
-console.log(listOfUsers);
-console.log(listOfUsers.indexOf('Herve'));
+switch (key) {
+    case value:
+        console.log('Wow, I Love Bananas too!')
+        break;
+    case value2:
+        console.log(listOfUsers[3]);
+        listOfUsers.push('Name5', 'NAME6');
+        console.log(listOfUsers);
+        listOfUsers.shift();
+        console.log(listOfUsers);
+        console.log(listOfUsers.indexOf('Herve'));
+    default:
+        user.greet();
+        break;
+}
+
+
