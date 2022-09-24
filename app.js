@@ -1,9 +1,14 @@
 function greet(name) {
-    console.log(`Hello ${name}`);
+    return `Hello ${name}`
 }
-function askStuff() {
-    let name = prompt(`What's your Name?`);
-    let age = prompt(`How old are you?`);
-    console.log(`userName = ${name}\nage = ${age}`);
+function signIn() {
+    let userName = prompt(`What's your Name?`);
+    let userAge = prompt(`How old are you?`);
+    console.log(`
+        ======================================
+        ${greet(userName)}
+        You say you are ${userAge} years old?
+        ======================================
+    `);
 }
-askStuff();
+signIn();
