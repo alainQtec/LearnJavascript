@@ -1,11 +1,9 @@
-function greet(textName, age) {
-    console.log(`Welcome to our Website  ${textName} ${age}`);
+function greet(name) {
+    console.log(`Hello ${name}`);
 }
-function signUp() {
-    let name = prompt('What Is your Name?');
-    let ag = prompt('How old Are you?');
-    greet(name, ag);
+function askStuff() {
+    let name = prompt(`What's your Name?`);
+    let age = prompt(`How old are you?`);
+    console.log(`userName = ${name}\nage = ${age}`);
 }
-console.log('The Rest Of The code...')
-
-signUp();
+askStuff();
