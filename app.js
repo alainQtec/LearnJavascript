@@ -14,15 +14,16 @@ const user = {
         console.log('HELLO tHERE!');
     }
 };
-const funnytext = 'Bananan';
+const text = 'Bananan';
 const listOfUsers = ['Alain', 'Herve', 'Name3', 'Name4'];
-const key = true;
 window.console.clear();
 // console.warn('Be warned!');
-switch (key) {
-    case 'bannana':
+switch (prompt('What Kind Of food do you LIKE ?')) {
+    case 'Bananan':
         console.log('Wow, I Love Bananas too!')
         break;
+    case 'Hello':
+        user.greet();
     case 'hhekek':
         console.log(listOfUsers[3]);
         listOfUsers.push('Name5', 'NAME6');
@@ -33,7 +34,7 @@ switch (key) {
     case 'err':
         window.console.error('This is an error Message!') // I hate errors.
     default:
-        user.greet();
+        console.log('What ?!');
         break;
 }
 
