@@ -1,2 +1,3 @@
 # JS-101
- Javascript
+
+ Vanilla Javascript Introduction
