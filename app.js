@@ -18,6 +18,7 @@ const text = 'Bananan';
 const listOfUsers = ['Alain', 'Herve', 'Name3', 'Name4'];
 window.console.clear();
 // console.warn('Be warned!');
+
 switch (prompt('What Kind Of food do you LIKE ?')) {
     case 'Bananan':
         console.log('Wow, I Love Bananas too!')
