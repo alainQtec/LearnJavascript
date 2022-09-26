@@ -46,9 +46,10 @@ const user = {
 
 //*********** */ Loops
 
-// for (let i = 0; i <= 10; i++) {
-//     console.log(i);
-// }
+for (let i = 0; i <= 10; i++) {
+    console.log(i);
+}
+// lOOP IN ARRAY (Basic for & for of)
 let array = ['one', 'two', 'Three', 'Four'];
 for (let index = 0; index < array.length; index++) {
     const element = array[index];
@@ -62,4 +63,11 @@ array.forEach(function parse(name, index) {
 console.log('---------------------------------\n\n')
 for (const element of array) {
     console.log(element, array.indexOf(element));
+}
+// LOOP inside object (for-in)
+console.log('-----------for-in-------------\n\n')
+for (const key in user) {
+    console.log(
+        key.toLocaleLowerCase(), user[key]
+    );
 }
