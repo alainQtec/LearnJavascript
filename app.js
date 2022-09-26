@@ -8,13 +8,15 @@ function askCreds() {
     return [name, age]
 }
 //*********** */ Objects
-// const user = {
-//     name: 'Alain',
-//     age: 22,
-//     greet: function () {
-//         console.log('HELLO tHERE!');
-//     }
-// };
+const user = {
+    name: 'Alain',
+    age: 22,
+    height: 178,
+    money: NaN,
+    greet: function () {
+        console.log('HELLO tHERE!');
+    }
+};
 // const text = 'Bananan';
 // const listOfUsers = ['Alain', 'Herve', 'Name3', 'Name4'];
 // window.console.clear();
@@ -50,9 +52,14 @@ function askCreds() {
 let array = ['one', 'two', 'Three', 'Four'];
 for (let index = 0; index < array.length; index++) {
     const element = array[index];
-    console.log(element);
+    console.log(element, index);
 }
 console.log('*********************************\n\n')
 array.forEach(function parse(name, index) {
     console.log(name, index);
-})
+});
+
+console.log('---------------------------------\n\n')
+for (const element of array) {
+    console.log(element, array.indexOf(element));
+}
