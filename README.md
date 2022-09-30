@@ -1,3 +1,3 @@
 # JS-101
 
- Vanilla Javascript Introduction
+ Vanilla Javascript revision
