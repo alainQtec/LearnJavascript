@@ -7,7 +7,7 @@ counter.innerHTML = items.length
 button.addEventListener('click', function () {
     let item = document.createElement('li');
     item.classList.add('item');
-    item.innerText = 'Item 6';
+    item.innerText = `Item ${items.length + 1}`;
     todolist.appendChild(item);
     counter.innerHTML = items.length
 });
