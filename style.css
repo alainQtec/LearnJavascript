@@ -1,0 +1,11 @@
+.spectacular {
+    font-size:x-large;
+    color: blueviolet;
+}
+.counter {
+    transition: all 0.5 ease;
+}
+
+.buttns {
+    align-items: flex-start;
+}
