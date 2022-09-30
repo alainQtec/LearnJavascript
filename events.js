@@ -1,21 +1,22 @@
 const todolist = document.querySelector('#todolist');
 const btnsBlock = document.getElementById('buttns');
 const items = todolist.children; //html collection
-const button1 = document.querySelector('.add_item');
-const button2 = document.querySelector('.Impress');
+const addbtn = document.querySelector('.add_item');
+const rembtn = document.querySelector('.remove_item');
 const counter = document.querySelector('.counter');
-counter.innerHTML = items.length
+counter.innerHTML = items.length;
 
-button1.addEventListener('click', function () {
+addbtn.addEventListener('click', function () {
     let item = document.createElement('li');
     item.classList.add('item');
     item.innerText = `Item ${items.length + 1}`;
     todolist.appendChild(item);
-    counter.innerHTML = items.length
+    counter.innerHTML = items.length;
+    counter.classList.toggle('spectacular');
 });
 
-button2.addEventListener('click', function () {
-    btnsBlock.style.backgroundColor = 'red'
-})
+rembtn.addEventListener('click', function () {
+    counter.classList.toggle('spectacular');
+});
 
 //  styles
