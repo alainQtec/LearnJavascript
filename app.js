@@ -24,3 +24,14 @@
 //         alert('What ?!');
 //         break;
 // }
+
+// Collections Are dynamic
+const collection = document.getElementsByClassName('item');
+const todoList = document.getElementById('todolist');
+const nuitem = document.createElement('li');
+nuitem.className = 'item'; nuitem.innerText = 'item 6';
+todoList.appendChild(nuitem);
+
+
+// while Nodelists are static
+
