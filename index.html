@@ -10,19 +10,20 @@
 </head>
 
 <body>
-    <h2>Todo List</h2>
-    <ul id="todolist">
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-        <li class="item">Item 4</li>
-        <li class="item">Item 5</li>
-    </ul>
-    <div id="buttns">
-        <button class="add_item">+</button>
-        <button class="remove_item">-</button>
+    <div class="todoPage">
+        <h2 class="title">Todo List</h2>
+        <ul id="todolist">
+            <li class="demoItem item">Item 1</li>
+        </ul>
+        <form class="inputForm">
+            <input class="InputTxt" name="item" type="text">
+            <button class="fmbtn addBtn" type="submit">Add</button>
+            <button class="fmbtn resetBtn" type="reset">Reset</button>
+        </form>
     </div>
-    <p>Counter: <b class="counter">0</b></p>
+    <div class="pagesummary">
+        <p class="CounterTxt">Number of Items: <b class="counter">0</b></p>
+    </div>
     <script src="./events.js"></script>
 </body>
 
