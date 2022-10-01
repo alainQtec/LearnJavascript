@@ -15,15 +15,10 @@ function addEventListeners(item) {
 
 addBtn.addEventListener('click', function (e) {
     e.preventDefault(); // Prevent the  page from refeshing (so we wont loose our Data).
-    if (InputTxt.value != null) {
-        console.log(InputTxt.value);
-        let el = document.createElement('li'); el.className = 'item'; el.innerText = InputTxt.value;
-        todoList.appendChild(el);
-        counter.innerHTML = items.length;
-        addEventListeners(el);
-    } else {
-        console.log('Null El')
-    }
+    let el = document.createElement('li'); el.className = 'item'; el.innerText = InputTxt.value;
+    todoList.appendChild(el);
+    counter.innerHTML = items.length;
+    addEventListeners(el);
 });
 for (const item of items) {
     addEventListeners(item);
