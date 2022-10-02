@@ -1,3 +1,30 @@
+const title = document.getElementsByClassName("title");
+const pageName = document.getElementsByClassName("todoPage");
+const todoList = document.querySelector("#todolist");
+const counter = document.querySelector(".counter");
+const addBtn = document.querySelector(".addBtn");
+const InputTxt = document.querySelector(".InputTxt");
+const items = todoList.children;
+
+function addEventListeners(item) {
+    item.addEventListener('click', function (e) {
+        e.stopPropagation(); item.remove();
+        counter.innerHTML = items.length;
+    });
+}
+
+addBtn.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent the  page from refeshing (so we wont loose our Data).
+    let el = document.createElement('li'); el.className = 'item'; el.innerText = InputTxt.value;
+    todoList.appendChild(el);
+    counter.innerHTML = items.length;
+    addEventListeners(el);
+});
+for (const item of items) {
+    addEventListeners(item);
+}
+counter.innerHTML = items.length;
+
 // const text = 'Bananan';
 // const listOfUsers = ['Alain', 'Herve', 'Name3', 'Name4'];
 // window.console.clear();
@@ -26,12 +53,4 @@
 // }
 
 // Collections Are dynamic
-const collection = document.getElementsByClassName('item');
-const todoList = document.getElementById('todolist');
-const nuitem = document.createElement('li');
-nuitem.className = 'item'; nuitem.innerText = 'item 6';
-todoList.appendChild(nuitem);
-
-
-// while Nodelists are static
 
