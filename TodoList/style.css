@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #eae9e7 0%, #000000 100%);
+  background-image: linear-gradient(120deg, #d2d1ce 0%, #000000 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -21,6 +21,11 @@ form {
   justify-content: center;
   align-items: center;
 }
+.title {
+    font-kerning: auto;
+    font-optical-sizing:initial;
+}
+
 form input,
 form button {
   padding: 0.5rem;
@@ -59,6 +64,14 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
 }
+.todo-input,
+.todo-button {
+    border-radius: 7px;
+}
+button.todo-button {
+    margin-left: .4rem;
+}
+/* padding-bottom: 0.9%; */
 .filter-todo {
   padding: 1rem;
 }
