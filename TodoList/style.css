@@ -11,6 +11,7 @@ body {
 }
 header {
   font-size: 2rem;
+  font-weight: 500;
 }
 
 header,
@@ -34,7 +35,7 @@ form button {
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #200e08;
+  background: #262423;
   color: white;
 }
 .todo-container {
@@ -132,8 +133,8 @@ select {
   pointer-events: none;
 }
 /* Transition */
-/*
+
 .select:hover::after {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
-*/
+
