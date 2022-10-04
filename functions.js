@@ -19,6 +19,7 @@ numbers.sort((x, y) => x - y);
 
 
 // array of funtions:
+// Pretty usefull if you need to store a sequence of actions ( or functions)
 function jump() {
     console.log('I jump')
 }
@@ -36,3 +37,5 @@ let actions = [jump, punch, block, kick]
 for (let i = 0; i < actions.length; i++) {
     actions[i]();
 }
+// or
+actions.forEach(action => action());
