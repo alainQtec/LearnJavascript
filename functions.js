@@ -16,3 +16,23 @@ numbers.sort(function (x, y) {
 });
 // or
 numbers.sort((x, y) => x - y);
+
+
+// array of funtions:
+function jump() {
+    console.log('I jump')
+}
+function punch() {
+    console.log('I punch')
+}
+function block() {
+    console.log('I block')
+}
+function kick() {
+    console.log('I kick ass')
+}
+let actions = [jump, punch, block, kick]
+
+for (let i = 0; i < actions.length; i++) {
+    actions[i]();
+}
