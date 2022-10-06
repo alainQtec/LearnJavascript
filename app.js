@@ -55,7 +55,7 @@ counter.innerHTML = items.length;
 class Wrapper {
     constructor(element, text, display = true) {
         this.element = document.createElement(element);
-        this.element.innerHTML = text;
+        this.element.innerText = text;
         this.display = !display;
         this.toggleDisplay();
     }
@@ -103,8 +103,7 @@ class AnchorWrapper extends Wrapper {
 
 const renderPost = (post, user) => {
     const bodyDiv = Wrapper.generate("div", "", false)
-        .createChild("p", post.body)
-        .appendChild(Wrapper.generate("p", user.username).addClass("tooltip")
+        .createChild("p", post.body).appendChild(Wrapper.generate("p", user.username).addClass("tooltip")
             .appendChild(Wrapper.generate("span", `${user.name} `)
                 .appendChild(AnchorWrapper.generate(`mailto:${user.email}`, user.email))
                 .createChild("br", "")
