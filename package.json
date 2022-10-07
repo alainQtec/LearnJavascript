@@ -1,0 +1,54 @@
+{
+  "name": "js-101",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A beginner Javascript Learning Playground",
+  "main": "Classes.js",
+  "scripts": {
+    "test": "jest --no-cache",
+    "style": "standard",
+    "prepare": "husky install"
+  },
+  "author": "alainQtec",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "atob": "2.1.2",
+    "jsdom": "^16.3.0",
+    "node": "^16.13.2",
+    "node-fetch": "3.1.1"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "parser": "@babel/eslint-parser"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^26.3.0",
+    "globby": "^12.0.2",
+    "husky": "^7.0.4",
+    "jest": "^26.4.2",
+    "standard": "^16.0.4"
+  },
+  "engines": {
+    "node": ">=16.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alainQtec/JS-101.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "learn"
+  ],
+  "bugs": {
+    "url": "https://github.com/alainQtec/JS-101/issues"
+  },
+  "homepage": "https://github.com/alainQtec/JS-101#readme"
+}
