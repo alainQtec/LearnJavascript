@@ -38,10 +38,7 @@
   "engines": {
     "node": ">=16.6.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alainQtec/JS-101.git"
-  },
+  "repository": "git+https://github.com/alainQtec/JS-101.git",
   "keywords": [
     "js",
     "javascript",
@@ -50,5 +47,6 @@
   "bugs": {
     "url": "https://github.com/alainQtec/JS-101/issues"
   },
-  "homepage": "https://github.com/alainQtec/JS-101#readme"
+  "homepage": "https://github.com/alainQtec/JS-101#readme",
+  "private": false
 }
