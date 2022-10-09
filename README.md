@@ -1,5 +1,9 @@
-# JS-101
+# JS 101
 
- Vanilla Javascript revision
+ A beginner Javascript Learning Playground.
 
- The revision follows Javasscript [algorithms](https://the-algorithms.com/language/javascript) thats why the folder structure look similar
+ Learn Javascript "data structures and algorithms" then practice them in Interactive Web app projects.
+
+# Note
+
+>This project uses JS algorithms from [the-algorithms.com](https://the-algorithms.com/language/javascript).
