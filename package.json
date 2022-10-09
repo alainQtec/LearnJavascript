@@ -14,9 +14,7 @@
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"
   },
-  "description": "A beginner Javascript Learning Playground.",
   "main": "app.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alainQtec/JS-101.git"
