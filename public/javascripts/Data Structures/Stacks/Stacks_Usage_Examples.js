@@ -28,3 +28,19 @@ function reverseWord (wordString) {
 }
 
 reverseWord('letters');
+
+var stack = function() {
+  this.count = 0;
+  this.storage = {};
+  
+  this.push = (item) => {
+    this.storage[this.count] = item;
+    this.count++;
+  }
+  this.pop = () => {}
+  return this
+}
+let a = new stack();
+
+// Example: Add item to the stack
+a.push('itemOne');
