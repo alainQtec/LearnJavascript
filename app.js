@@ -37,10 +37,4 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500)
   res.render('error')
 })
-
-// Home
-app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!').end()
-})
-
 module.exports = app
