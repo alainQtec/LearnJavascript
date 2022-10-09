@@ -84,13 +84,3 @@ function onListening() {
   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
   debug('Listening on ' + bind)
 }
-
-app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!').end()
-})
-
-// Start the server
-// app.listen(port, () => {
-//   console.log(`App listening on port ${port}`)
-//   console.log('Press Ctrl+C to quit.')
-// })
