@@ -17,7 +17,8 @@
 param (
     # Port Number.
     [Parameter(Mandatory = $true, Position = 0)]
-    [string]$Port
+    [string]$Port,
+    [switch]$Passthru
 )
 
 begin {
