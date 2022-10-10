@@ -47,3 +47,13 @@ Learn Javascript "data structures and algorithms" then practice them in Interact
 ## // [this](#js-101).Notes
 
 > This project uses JS algorithms from [the-algorithms.com](https://the-algorithms.com/language/javascript).
+
+## Issues (and common fixes)
+
+Sometimes you may run into Error `EADDRINUSE` when trying to run `npm start`
+
+To fix this (On Windows):
+
+```PowerShell
+. \public\otherScripts\Resolve-EADDRINUSE.ps1
+```
