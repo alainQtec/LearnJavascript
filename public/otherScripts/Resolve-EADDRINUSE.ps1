@@ -21,17 +21,10 @@ param (
     [switch]$Passthru
 )
 
-begin {
-    $script:getProcList = {
-        param($PortNumber)
-            return (NETSTAT.EXE -ano | findstr :$PortNumber)
-        }
-    $tk = [IO.Path]::Combine([Environment]::GetFolderPath('System'),'taskkill.exe')
-}
-
 process {
+    $tk = [IO.Path]::Combine([Environment]::GetFolderPath('System'),'taskkill.exe')
     # $tmp = [IO.Path]::GetTempFileName(); $getProcList.Invoke($Port) | Out-File $tmp
-    $processList = $getProcList.Invoke($Port).split("\n")
+    $processList = $(NETSTAT.EXE -ano | findstr :$Port).Tostring().split("\n")
     $processList = $processList.ForEach({
             $Array = $_.split(' ', [System.StringSplitOptions]::RemoveEmptyEntries)
             $noAct = $Array[4] -eq " ";
