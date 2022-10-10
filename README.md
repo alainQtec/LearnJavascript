@@ -4,9 +4,9 @@ Javascript is _a [High-Level](), [Single-Threaded](), [Garbage-Collected]() [Int
 
 **😐😬🤯**
 
-Ik; get a quick into on [how its made]() 😂
+Ik; get a quick into on [how its made](https://www.youtube.com/watch?v=FSs_JYwnAdI) 😂
 
-Kudos to [Fireship]() YT channel.
+Kudos to [Fireship](https://www.youtube.com/c/Fireship) YT channel.
 
 ## // [this](#js-101).repo
 
@@ -51,9 +51,9 @@ Learn Javascript "data structures and algorithms" then practice them in Interact
 ## Issues (and common fixes)
 
 When you start the app after it has previously crashed, you may receive [Error `EADDRINUSE`](https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server)
- or when `npm start` failed. ie:
+or when `npm start` failed. ie:
 
->EADDRINUSE, Address already in use
+> EADDRINUSE, Address already in use
 
 To fix this (On Windows):
 
