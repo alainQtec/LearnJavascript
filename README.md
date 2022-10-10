@@ -50,7 +50,10 @@ Learn Javascript "data structures and algorithms" then practice them in Interact
 
 ## Issues (and common fixes)
 
-Sometimes you may run into Error `EADDRINUSE` when trying to run `npm start`
+When you start the app after it has previously crashed, you may receive [Error `EADDRINUSE`](https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server)
+ or when `npm start` failed. ie:
+
+>EADDRINUSE, Address already in use
 
 To fix this (On Windows):
 
