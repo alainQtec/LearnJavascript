@@ -1,7 +1,19 @@
-﻿# TODO: Make this script Cross-Platform
-# for now it's only designed  to work on windows.
-function Resolve-EADDRINUSE {
-    [CmdletBinding()]
+﻿<#
+.SYNOPSIS
+    # for now it's only designed  to work on windows.
+.DESCRIPTION
+    Long description
+.EXAMPLE
+    PS C:\> <example usage>
+    Explanation of what the example does
+.INPUTS
+    Inputs (if any)
+.OUTPUTS
+    Output (if any)
+.NOTES
+    # TODO: Make this script Cross-Platform
+#>
+    [CmdletBinding(SupportsShouldProcess)]
     [Alias('FixEADR')]
     param (
         # Port Number.
@@ -30,19 +42,22 @@ function Resolve-EADDRINUSE {
                 }
                 $_ACT = if ([string]::IsNullOrWhiteSpace($_PID) -or $_PID -ne $Array[3]) { [string]::Empty; $_PID = $Array[3] }else { [string]::Empty }
                 [PSCustomObject]@{
-                    IntIP = $Array[1]
-                    ExtIP = $Array[2]
-                    NetType = $Array[0]
+                    # IntIP = $Array[1]
+                    # ExtIP = $Array[2]
+                    # NetType = $Array[0]
                     Activity = $_ACT
                     ProcID = $_PID
                 }
             }
         )
         Write-Verbose "Found $($processList.count) running Processes that are still using the EADDR."
-        taskkill /PID 4744 /F
+        $Pids = $processList.ProcId | Sort-Object -Unique | Where-Object {$_ -as 'int'}
+        $Pids.ForEach({
+                if ($PSCmdlet.ShouldProcess("PID:$_", "taskkill")) {
+                    taskkill /PID $_ /F
+                }
+            }
+        )
     }
 
-    end {
-
-    }
-}
+    end {}
