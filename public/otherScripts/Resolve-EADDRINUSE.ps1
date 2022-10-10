@@ -22,13 +22,13 @@ function Resolve-EADDRINUSE {
                 $Array = $_.split(' ', [System.StringSplitOptions]::RemoveEmptyEntries)
                 $noAct = $Array[4] -eq " ";
                 $_PID = if ($noAct) { $Array[4] }else {
-                    if ($Array[3] -is 'int') {
+                    if ($Array[3] -as 'int') {
                         $Array[3]
                     }else {
-                        [string]::Empty
+                        ' '
                     }
                 }
-                $_ACT = if ($_PID -eq $Array[3]) { [string]::Empty }else { $Array[3] }
+                $_ACT = if ([string]::IsNullOrWhiteSpace($_PID) -or $_PID -ne $Array[3]) { [string]::Empty; $_PID = $Array[3] }else { [string]::Empty }
                 [PSCustomObject]@{
                     IntIP = $Array[1]
                     ExtIP = $Array[2]
