@@ -5,53 +5,59 @@
 * from the end of the array.
 */
 
-// Functions: push, pop, peek, view, length
+// Methods: push, pop, peek, view, length
 
-// Creates a stack constructor
-const Stack = (function () {
-  function Stack () {
-    // The top of the Stack
-    this.top = 0
-    // The array representation of the stack
-    this.stack = []
+// Stacks
+class Mystack {
+  count = 0;
+  storage = {};
+  constructor() {
   }
-
-  // Adds a value onto the end of the stack
-  Stack.prototype.push = function (value) {
-    this.stack[this.top] = value
-    this.top++
+  // Add the value at the end of the stack
+  push(val){
+    this.storage[this.count] = val
+    this.count++
   }
-
-  // Removes and returns the value at the end of the stack
-  Stack.prototype.pop = function () {
-    if (this.top === 0) {
-      return 'Stack is Empty'
+  // Remove and return the value at the end of the stack
+  pop(){
+    if(this.count === 0){
+      return undefined;
     }
-
-    this.top--
-    const result = this.stack[this.top]
-    this.stack = this.stack.splice(0, this.top)
-    return result
+    this.count--
+    let returnVal = this.storage[this.count]
+    delete this.storage[this.count];
+    return returnVal
   }
-
-  // Returns the size of the stack
-  Stack.prototype.size = function () {
-    return this.top
+  peek(){
+    return this.storage[this.count-1]
   }
-
-  // Returns the value at the end of the stack
-  Stack.prototype.peek = function () {
-    return this.stack[this.top - 1]
+  size(){
+    return this.count
   }
-
-  // To see all the elements in the stack
-  Stack.prototype.view = function (output = value => console.log(value)) {
-    for (let i = 0; i < this.top; i++) {
-      output(this.stack[i])
+  view(){
+    let i, res = []
+    for(i = 0; i < this.count; i++) {
+      res.push(this.storage[i]) 
     }
+    return res
   }
+  // Returns true if stack is empty, false otherwise
+  isEmpty () {
+    return this.storage === 0
+  }
+}
 
-  return Stack
-}())
+/*
 
-export { Stack }
+var st = new Mystack()
+st.push(2)
+st.peek()
+st.push(3)
+st.push(4)
+console.log(st.storage)
+st.pop()
+console.log(st.storage)
+st.view()
+st.isEmpty()
+
+*/
