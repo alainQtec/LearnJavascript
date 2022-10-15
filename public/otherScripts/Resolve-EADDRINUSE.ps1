@@ -17,42 +17,45 @@
 param (
     # Port Number.
     [Parameter(Mandatory = $true, Position = 0)]
-    [string]$Port,
-    [switch]$Passthru
+    [int]$Port
 )
 
 process {
-    $tk = [IO.Path]::Combine([Environment]::GetFolderPath('System'),'taskkill.exe')
-    # $tmp = [IO.Path]::GetTempFileName(); $getProcList.Invoke($Port) | Out-File $tmp
-    $processList = $(NETSTAT.EXE -ano | findstr :$Port).Tostring().split("\n")
-    $processList = $processList.ForEach({
-            $Array = $_.split(' ', [System.StringSplitOptions]::RemoveEmptyEntries)
-            $noAct = $Array[4] -eq " ";
-            $_PID = if ($noAct) { $Array[4] }else {
-                if ($Array[3] -as 'int') {
-                    $Array[3]
-                }else {
-                    ' '
+    $tmp = [IO.Path]::GetTempFileName(); $(NETSTAT.EXE -ano | findstr :$Port) | Out-File $tmp;
+    $processList = Get-Content $tmp
+    if ($processList.Count -gt 0) {
+        $Pids = $processList.ForEach({
+                $Array = $_.split(' ', [System.StringSplitOptions]::RemoveEmptyEntries)
+                $noAct = $Array[4] -eq " ";
+                $_PID = if ($noAct) { $Array[4] }else {
+                    if ($Array[3] -as 'int') {
+                        $Array[3]
+                    }else {
+                        ' '
+                    }
+                }
+                $_ACT = if ([string]::IsNullOrWhiteSpace($_PID) -or $_PID -ne $Array[3]) { [string]::Empty; $_PID = $Array[3] }else { [string]::Empty }
+                [PSCustomObject]@{
+                    # IntIP = $Array[1]
+                    # ExtIP = $Array[2]
+                    # NetType = $Array[0]
+                    Activity = $_ACT
+                    ProcID = $_PID
                 }
             }
-            $_ACT = if ([string]::IsNullOrWhiteSpace($_PID) -or $_PID -ne $Array[3]) { [string]::Empty; $_PID = $Array[3] }else { [string]::Empty }
-            [PSCustomObject]@{
-                # IntIP = $Array[1]
-                # ExtIP = $Array[2]
-                # NetType = $Array[0]
-                Activity = $_ACT
-                ProcID = $_PID
+        ).ProcId | Sort-Object -Unique | Where-Object {$_ -as 'int' -and $_ -ne $PID}
+        Write-Verbose "Found $($Pids.count) PIDs that are still using the EADDR."
+        $Pids.ForEach({
+                # Start-Process  -FilePath $([IO.Path]::Combine([Environment]::GetFolderPath('System'),'taskkill.exe')) -ArgumentList "/PID $_ /F" -Verb runas
+                if ($PSCmdlet.ShouldProcess("Stop-Process -Id $_ -Force",'', '')) {
+                    Stop-Process -Id $_ -Force
+                }
             }
-        }
-    )
-    Write-Verbose "Found $($processList.count) running Processes that are still using the EADDR."
-    $Pids = $processList.ProcId | Sort-Object -Unique | Where-Object {$_ -as 'int'}
-    $Pids.ForEach({
-            if ($PSCmdlet.ShouldProcess("PID:$_", "taskkill")) {
-                Start-Process  -FilePath $tk -ArgumentList "/PID $_ /F" -Verb runas
-            }
-        }
-    )
+        )
+    }else {
+        Write-Verbose "Found no running Processes that are still using the EADDR."
+    }
+    Remove-Item $tmp | Out-Null
 }
 
 end {}
