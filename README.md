@@ -14,7 +14,7 @@ This repo is meant to be a beginner's Javascript _Learning Playground._
 
 Learn Javascript "data structures and algorithms" then practice them in Interactive Web app projects.
 
-### // [this](#js-101).dirTree
+### // dirTree
 
 ```text
 ├───.github
@@ -44,7 +44,7 @@ Learn Javascript "data structures and algorithms" then practice them in Interact
 └───views
 ```
 
-## // [this](#js-101).Notes
+## // Notes
 
 > This project uses JS algorithms from [the-algorithms.com](https://the-algorithms.com/language/javascript).
 
