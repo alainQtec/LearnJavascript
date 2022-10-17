@@ -60,3 +60,5 @@ To fix this (On Windows):
 ```PowerShell
 . \public\otherScripts\Resolve-EADDRINUSE.ps1
 ```
+
+![Alt](https://repobeats.axiom.co/api/embed/d192a1a9d4c416602898f7a613858acb869840e0.svg "Repobeats analytics image")
