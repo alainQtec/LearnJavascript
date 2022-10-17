@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+html,
+body {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 1.5rem;
+}
+.boxcontainer {
+    display: flex;
+}
+.box {
+    width: 6rem;
+    height: 6rem;
+    border: 0.1rem solid black;
+    background-color: aquamarine;
+}
