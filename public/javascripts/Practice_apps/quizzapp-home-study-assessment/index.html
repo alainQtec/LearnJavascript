@@ -2,17 +2,96 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
-        <title>Quizz</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+            rel="stylesheet"
+        />
+        <title>Quizz app</title>
     </head>
     <body>
-        <p>Hello World! from Quizz app</p>
-        <div class="boxcontainer">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+        <div class="container">
+            <button id="close-btn" class="close-btn hide" title="Close">
+                <i class="bx bx-x hide"></i>
+            </button>
+            <div id="question-container" class="hide">
+                <div class="question" id="question">
+                    <h1 class="question-title">Question title goes here</h1>
+                    <p class="question-description">
+                        Question description goes here
+                    </p>
+                </div>
+                <div id="answer-inputs-container" class="choices">
+                    <input id="one" type="checkbox" />
+                    <label for="one">
+                        <span></span>
+                        Off with your head
+                        <ins><i>Off with your head</i></ins>
+                    </label>
+
+                    <input id="two" type="checkbox" />
+                    <label for="two">
+                        <span></span>
+                        Dance til youre dead
+                        <ins><i>Dance til youre dead</i></ins>
+                    </label>
+
+                    <input id="three" type="checkbox" />
+                    <label for="three">
+                        <span></span>
+                        Heads will roll
+                        <ins><i>Heads will roll</i></ins>
+                    </label>
+
+                    <input id="four" type="checkbox" />
+                    <label for="four">
+                        <span></span>
+                        On the floor
+                        <ins><i>On the floor</i></ins>
+                    </label>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start Quiz</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+            </div>
         </div>
+        <!-- <section class="blue">
+            <h1>Section 1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis eveniet atque nulla debitis adipisci eos beatae qui non
+                sunt temporibus autem illum esse excepturi molestiae nam quod
+                nobis, sapiente eaque.
+            </p>
+            <div class="curve"></div>
+        </section>
+        <section>
+            <h1>Section 2</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione qui veniam nobis ex pariatur vitae reprehenderit nisi
+                illo, alias praesentium omnis? Doloribus error dolorum veniam,
+                aperiam commodi sit. Facere, ut!
+            </p>
+        </section>
+        <div class="spacer layer flip"></div>
+        <script>
+            const tween = KUTE.fromTo(
+                '#blob1',
+                { path: '#blob1' },
+                { path: '#blob2' },
+                { repeat: 999, duration: 3000, yoyo: true },
+            ).start()
+        </script> -->
+        <script src="script.js" defer></script>
     </body>
 </html>
