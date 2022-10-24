@@ -1,0 +1,26 @@
+{
+  "name": "javascript-arrays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "prettier": "prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaztWeb/javascript-arrays.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaztWeb/javascript-arrays/issues"
+  },
+  "homepage": "https://github.com/FaztWeb/javascript-arrays#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.3",
+    "prettier": "^2.6.1"
+  }
+}
