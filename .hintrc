@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "aspect-ratio",
+          "scroll-behavior",
+          "user-select",
+          "text-decoration-skip-ink"
+        ]
+      }
+    ],
+    "button-type": "off"
+  }
+}
