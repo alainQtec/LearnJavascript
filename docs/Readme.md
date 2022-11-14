@@ -2,6 +2,8 @@
 
 > This project uses JS algorithms from [the-algorithms.com](https://the-algorithms.com/language/javascript).
 
+Read the [Intro](docs/Intro.md).
+
 ## Issues (and common fixes)
 
 When you start the app after it has previously crashed, you may receive [Error `EADDRINUSE`](https://stackoverflow.com/questions/4075287/node-express-eaddrinuse-address-already-in-use-kill-server)

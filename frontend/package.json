@@ -1,11 +1,10 @@
 {
     "name": "learnjavascript",
     "version": "1.0.0",
-    "description": "Vanilla JavaScript Practice apps and games. Learn by doing.",
+    "description": "frontend for the LearnJavascript web app.",
     "main": "index.js",
     "scripts": {
-        "start": "npm run start --prefix frontend",
-        "dev": "nodemon frontend/index.js"
+        "start": "http-server"
     },
     "repository": {
         "type": "git",
@@ -22,7 +21,9 @@
         "url": "https://github.com/alainQtec/LearnJavascript/issues"
     },
     "homepage": "https://github.com/alainQtec/LearnJavascript#readme",
-    "devDependencies": {
-        "nodemon": "^2.0.20"
+    "dependencies": {
+        "bootstrap": "5.0.0-beta2",
+        "http-server": "14.1.1",
+        "node-fetch": "^3.3.0"
     }
 }

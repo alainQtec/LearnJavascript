@@ -19,7 +19,7 @@ const validLowerCaseYesAndNoStrings = [
 // Function to get a random number (card) 2-14 (ACE is 14)
 function getRandomCard() {
     // In our game, the value of ACE is greater than face cards;
-    // instead of having the value of ACE be 1, we’ll have it be 14.
+    // instead of having the value of ACE be 1, we'll have it be 14.
     // So, we want to shift the range of random numbers from 1-13 to 2-14
     let min = 2;
     let max = 14;
@@ -99,8 +99,7 @@ async function main() {
                 }
             }
         }
-        if (bet == 0)
-        {
+        if (bet == 0) {
             // User chose not to bet.
             print('CHICKEN!!');
             print('');
