@@ -23,6 +23,6 @@
     "homepage": "https://github.com/alainQtec/LearnJavascript#readme",
     "dependencies": {
         "bootstrap": "5.0.0-beta2",
-        "http-server": "0.12.3"
+        "http-server": "14.1.1"
     }
 }
