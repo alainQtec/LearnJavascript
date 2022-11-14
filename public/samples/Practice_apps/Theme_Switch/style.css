@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+.dark-mode{
+  background-color:#121212;
+  color:white;
+  button1;
+}
+
+h1{
+  font-family:'Trebuchet MS'; 
+  font-size:75px;
+}
+
+button{
+  font-family:'Trebuchet MS';
+  width:200px;
+  height:50px;
+  font-size:25px;
+  position:relative;
+  top:-30px;
+}

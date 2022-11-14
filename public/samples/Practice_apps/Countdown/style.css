@@ -1,0 +1,99 @@
+@import 'https://fonts.googleapis.com/css?family=Lato';
+* {
+  outline: none;
+}
+
+body, html {
+  margin: 0;
+  background: #ddd;
+}
+
+body {
+  font-family: "Lato", "Microsoft JhengHei", Arial, sans-serif;
+}
+
+.countdown {
+  width: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.countdown h3 {
+  margin: 0;
+  letter-spacing: 3.5px;
+  font-weight: normal;
+  padding-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.countdown h3 span {
+  padding-left: 25px;
+  color: #709386;
+}
+.countdown-timer {
+  width: 360px;
+  height: 70px;
+  background-color: #333;
+  color: #fefefe;
+  border-radius: 10px;
+}
+.countdown-timer > * {
+  float: left;
+  width: 100px;
+  height: 70px;
+  padding: 0 10px;
+  font-size: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+.countdown-timer > * span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.countdown-timer > * span.pop {
+  animation: pop 0.3s forwards;
+}
+.countdown-timer .hours, .countdown-timer .minutes, .countdown-timer .seconds {
+  position: relative;
+}
+.countdown-timer .hours::before, .countdown-timer .minutes::before, .countdown-timer .seconds::before {
+  position: absolute;
+  font-size: 18px;
+  line-height: initial;
+  top: -24px;
+  letter-spacing: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+}
+.countdown-timer .hours::after, .countdown-timer .minutes::after, .countdown-timer .seconds::after {
+  content: ":";
+  position: absolute;
+  line-height: 60px;
+  font-size: 60px;
+  top: 0;
+  right: -8px;
+}
+.countdown-timer .hours::before {
+  content: "Hours";
+}
+.countdown-timer .minutes::before {
+  content: "Minutes";
+}
+.countdown-timer .seconds::before {
+  content: "Seconds";
+}
+.countdown-timer .seconds::after {
+  display: none;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+}

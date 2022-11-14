@@ -1,0 +1,60 @@
+body {
+/* 	成個body做flex container */
+  display: flex;
+/* 	內容物既排法：打橫 */
+  flex-direction: row;
+/* 	會唔會換行？ */
+  flex-wrap: wrap;
+}
+
+.box {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.header {
+  align-self: flex-start;
+}
+
+.nav {
+  flex: 1 0 0;
+}
+
+.content {
+  flex: 4 0 0;
+}
+
+.sidebar {
+  flex: 2 0 0;
+}
+
+.header,
+.footer {
+/* 	header 跟 footer所佔的空間 */
+  flex-basis: 100%;
+  text-align: center;
+}
+
+dl * {
+  margin: 1em inherit;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex: 1 1 100%;
+  }
+  
+  .nav li {
+    display: inline;
+  }
+}
+
+@media (max-width: 500px) {
+  .content,
+  .sidebar {
+    flex: 1 1 100%;
+  }
+}

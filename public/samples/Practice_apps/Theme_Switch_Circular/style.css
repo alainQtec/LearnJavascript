@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro|Poly:400i");
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+body .clip {
+  z-index: 2;
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 100%;
+}
+body .clip.anim {
+  -webkit-animation: open 1.5s ease-in;
+          animation: open 1.5s ease-in;
+}
+@-webkit-keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+}
+@keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: var(--background);
+  color: var(--color);
+}
+body .container:not(.dark) {
+  --background: #fcfbfe;
+  --color:#323133;
+  --cardbackground: #ffffff;
+  --cardborder: #e9e9e9;
+  --cardtext:#323133;
+  --cardtext2:#3C3B3D;
+  --cardshadow:rgba(0,0,0,0.1);
+  --accent:#BF263C;
+}
+body .container.dark {
+  --background: #1C1B20;
+  --color:#F5F7FA;
+  --cardbackground: #222126;
+  --cardborder: #252429;
+  --cardtext:#F5F7FA;
+  --cardtext2:#E6E9ED;
+  --cardshadow:rgba(0,0,0,0.1);
+  --accent:#D8334A;
+}
+body .container *[class*=card] {
+  background: var(--cardbackground);
+  color: var(--cardtext);
+  box-shadow: 0 0 1rem -0.25rem var(--cardshadow);
+}
+body .container *[class*=card].card-b {
+  border: 1px solid var(--cardborder);
+}
+body .container .darkmode {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.75rem;
+  padding: 1rem;
+  margin: 1px;
+  border-radius: 100%;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 1rem -0.25rem var(--accent), inset 0 0 1rem -0.75rem var(--accent);
+  color: var(--accent);
+  cursor: pointer;
+  transition: 0.25s -0.05s;
+}
+body .container .darkmode:hover {
+  box-shadow: 0 0 1rem -0.25rem var(--accent), inset 0 0 1rem -0.25rem var(--accent);
+}
+body .container .page-width {
+  max-width: 800px;
+  width: calc(100vw - 8rem);
+}
+body .container .header {
+  z-index: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--cardborder);
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.75rem;
+}
+body .container .header .page-width {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .container .header .logotext i {
+  position: relative;
+  top: 0.15rem;
+}
+body .container .header .mytwitter {
+  position: relative;
+  line-height: 4rem;
+  color: var(--accent);
+  text-decoration: none;
+  -webkit-animation: flash 4s ease;
+          animation: flash 4s ease;
+}
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    color: var(--accent);
+  }
+  70%, 80% {
+    color: var(--cardtext);
+  }
+}
+@keyframes flash {
+  0%, 50%, 100% {
+    color: var(--accent);
+  }
+  70%, 80% {
+    color: var(--cardtext);
+  }
+}
+body .container .page {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+body .container .page:not(:last-child) {
+  margin-bottom: 0rem;
+}
+body .container .page:target-within {
+  border-color: var(--accent) !important;
+}
+body .container .page h1, body .container .page h2, body .container .page h3, body .container .page h4, body .container .page h5, body .container .page h6 {
+  margin: 0;
+}
+body .container .page h1:last-child, body .container .page h2:last-child, body .container .page h3:last-child, body .container .page h4:last-child, body .container .page h5:last-child, body .container .page h6:last-child {
+  margin-bottom: 0;
+}
+body .container .page h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cardborder);
+}
+body .container .page h1 a {
+  text-decoration: none;
+  font-weight: 200;
+}
+body .container .page h1 a:hover {
+  font-weight: 400;
+}
+body .container .page p:last-child {
+  margin-bottom: 0;
+}
+body .container .page a {
+  color: var(--accent);
+}
+body .container .page a:not(:hover) {
+  text-decoration: none;
+}
+body .container .page i {
+  color: var(--cardtext2);
+  font-family: "Poly", sans-serif;
+}
+body .container .page ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+body .container .page ul li:before {
+  content: "•";
+  margin-right: 1rem;
+  color: var(--accent);
+}
+body .container .page > div[id] {
+  position: absolute;
+  top: calc(-6rem - 2px);
+}
