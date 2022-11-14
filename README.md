@@ -1,6 +1,6 @@
-## // [**JS 101**](#LearnJavascript)
+## [**LearnJavascript**](#LearnJavascript)
 
-[Join Replit](https://replit.com/join/ixcjadhjln-alainqtec)
+[Join the Replit](https://replit.com/join/ixcjadhjln-alainqtec)
 
 Javascript is _a [High-Level](), [Single-Threaded](), [Garbage-Collected]() [Interpreted]() or [JIT compiled](), [Prototype-Based](), [multi-Paradigm](), [dynamic](), Language with a [non-Blocking]() [Event concurency model]()_.
 
@@ -10,7 +10,7 @@ Ik; get a quick into on [how its made](https://www.youtube.com/watch?v=FSs_JYwnA
 
 Kudos to [Fireship](https://www.youtube.com/c/Fireship) YT channel.
 
-## // [this](#LearnJavascript).repo
+## [this](#LearnJavascript).repo
 
 JavaScript in the browser has evolved. Developers who want to take advantage of the latest features have the option of going framework-less with less hassle.
 
@@ -43,6 +43,6 @@ Runs the HTTP server to host static assets, open `http://localhost:8080/` in the
 
 Enjoy!
 
-## // Contribution Summary
+## Contribution Summary
 
 ![Alt](https://repobeats.axiom.co/api/embed/d192a1a9d4c416602898f7a613858acb869840e0.svg 'Repobeats analytics image')
