@@ -12,7 +12,7 @@ or when `npm start` failed. ie:
 To fix this (On Windows):
 
 ```PowerShell
-. \public\otherScripts\Resolve-EADDRINUSE.ps1
+. \public\scripts\Resolve-EADDRINUSE.ps1
 ```
 
 ## How was the project stated/Was Build:
