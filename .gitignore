@@ -160,7 +160,6 @@ dist
 # Generated files
 .idea/**/contentModel.xml
 
-# Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
 .idea/**/dataSources.local.xml
@@ -168,8 +167,6 @@ dist
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
-
-# Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
 
@@ -207,3 +204,5 @@ fabric.properties
 
 ## local files to ignore
 *.ignore
+
+src/assets
