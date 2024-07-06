@@ -1,5 +1,0 @@
-#
-
-```bash
-Code practice Samples.
-```

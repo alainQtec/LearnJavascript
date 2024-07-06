@@ -1,16 +1,12 @@
-## [**LearnJavascript**](#LearnJavascript)
+# [**LearnJavascript**](#learnjavascript)
 
-[Join the Replit](https://replit.com/join/ixcjadhjln-alainqtec)
+Javascript is _a [High-Level](#thisrepo), [Single-Threaded](#thisrepo), [Garbage-Collected](#thisrepo) [Interpreted](#thisrepo) or [JIT compiled](#thisrepo), [Prototype-Based](#thisrepo), [multi-Paradigm](#thisrepo), [dynamic](#thisrepo), Language with a [non-Blocking](#thisrepo) [Event concurency model](#thisrepo)_.
 
-Javascript is _a [High-Level](), [Single-Threaded](), [Garbage-Collected]() [Interpreted]() or [JIT compiled](), [Prototype-Based](), [multi-Paradigm](), [dynamic](), Language with a [non-Blocking]() [Event concurency model]()_.
+😐😬🤯
 
-**😐😬🤯**
+Ik; get a quick into on [how its made](https://www.youtube.com/watch?v=FSs_JYwnAdI) 😂 by [Fireship](https://www.youtube.com/c/Fireship).
 
-Ik; get a quick into on [how its made](https://www.youtube.com/watch?v=FSs_JYwnAdI) 😂
-
-Kudos to [Fireship](https://www.youtube.com/c/Fireship) YT channel.
-
-## [this](#LearnJavascript).repo
+## [this](#learnjavascript).repo
 
 JavaScript in the browser has evolved. Developers who want to take advantage of the latest features have the option of going framework-less with less hassle.
 
@@ -22,14 +18,14 @@ Learn Javascript "data structures and algorithms" then practice them in Interact
 
 ## Requirements
 
--   [Node.js](http://nodejs.org/)
+- [Node.js](http://nodejs.org/)
 
 ## Installation Steps (if applicable)
 
 1. Clone repo
 2. Run `npm install`
 3. Run `npm start`
-4. Visit http://localhost:8080/
+4. Visit <http://localhost:8080/>
 
 ## Available scripts
 
