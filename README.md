@@ -39,7 +39,7 @@ Ensure the following are installed on your system:
 Start the Docker containers for the database and cache by executing `make up`:
 
 ```sh
-cd src && make up
+./build up
 ```
 
 ## Automation scripts
